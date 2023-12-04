@@ -17,7 +17,7 @@ database.once('connected', () => {
 })
 
 app.get('/', (req, res) => {
-    res.send('Hello, World!');
+    res.send('Hello,I updated World!');
 });
 
 app.get('/getAllArtifacts', async (req, res) => {
