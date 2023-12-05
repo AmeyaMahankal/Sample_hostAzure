@@ -1,25 +1,3 @@
-const net = require('net');
-
-const server = net.createServer((socket) => {
-    console.log('Client connected');
-
-    socket.on('data', (data) => {
-        console.log(`Received data: ${data}`);
-        // Process the data as needed
-    });
-
-    socket.on('end', () => {
-        console.log('Client disconnected');
-    });
-});
-
-const PORT = process.env.PORT || 3000;
-
-server.listen(PORT, () => {
-    console.log(`TCP server listening on port ${PORT}`);
-});
-
-/*
 const express = require('express');
 const app = express();
 const port = process.env.PORT || 3000;
@@ -54,4 +32,3 @@ app.get('/getAllArtifacts', async (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
-*/
